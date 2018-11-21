@@ -1,0 +1,11 @@
+version: '3.2'
+
+services:
+  dev:
+    build: .
+    container_name: mygatsby
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/home/node
+    command: "tail -f /dev/null"
